@@ -1,21 +1,24 @@
 function setup() {
-  canvas = createCanvas(1000,500);
-  background('orange');
+  canvas = createCanvas(450,450);
+  background('gray');
   canvas.parent('processing');
   noLoop();
 }
 
 function draw() {
   // groene cirkel zonder rand
-  
-  noStroke();
-  fill('green');
-  ellipse(300,200,400);
-  
+    noStroke();
+    fill('green')
+  ellipse(225,225,425);
   // witte rechthoek met rode rand
   
-  stroke('red');
-  fill('white');
-  strokeWeight(10);
-  rect(650,100,250,300);  
+  
+  noStroke();
+  fill('white')
+  ellipse(225,225,300);
+
+
+  stroke('green');
+  strokeWeight(10); 
+  rect(125,125,200,200);
 }
