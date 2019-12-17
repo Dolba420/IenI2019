@@ -1,4 +1,4 @@
-kleur='white';
+kleur='black';
 
 function setup() {
   canvas = createCanvas(501,501);
@@ -9,13 +9,20 @@ function setup() {
 function draw() {
   for (var rij = 0;rij < 500;rij += 50) {
     for (var kolom = 0;kolom < 500;kolom += 50) {
-        if(kolom%2==0){
-            fill('black');
+        if(kleur == 'white'){
+                kleur = "black";
         }
-        if(kolom%2==0){
-            fill('white');
+        else if(kleur == 'black'){
+                kleur = "white";
         }
+        fill(kleur);
       rect(kolom,rij,50,50);
     }
+            if(kleur == 'white'){
+                kleur = "black";
+        }
+        else if(kleur == 'black'){
+                kleur = "white";
+        }
   }
 }

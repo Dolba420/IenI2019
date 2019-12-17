@@ -1,5 +1,5 @@
-var aantalLagen = 5;
-var breedte = 90;
+var aantalLagen = 15;
+var breedte = 80;
 var hoogte;
 
 function setup() {
@@ -13,11 +13,14 @@ function setup() {
 }
 
 function draw() {
-  tekenRij(4);
+    for(var laag = 1; laag<=aantalLagen; laag++){
+  tekenRij(laag);
+  translate(0,hoogte);
+    }
 }
 
 function tekenRij(aantalStenen) {
-  inspringen = 0;
+  inspringen = (aantalLagen - aantalStenen)*0.5*breedte;
   push();
   translate(inspringen,0);
   for (var steen = 0;steen < aantalStenen;steen++) {
